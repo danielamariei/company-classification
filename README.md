@@ -5,6 +5,8 @@
 
 
 # Architecture 
+- Input: corpus of text + items
+- Output: found items
 
 ```mermaid
 flowchart LR

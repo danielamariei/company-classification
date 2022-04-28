@@ -66,7 +66,7 @@ There are two approaches:
    - Example: maxTerms(Tuesday Was Sunny) = 3
 
 ### Patricia
-The as for the `Trie` Strategy applies. Space usage is more efficient int this case.
+The same as for the `Trie` Strategy applies. Space usage is more efficient int this case.
 
 ### Lucene
 Lucene does most of the work out of the box for us: creating an efficient indexing structure, splitting, lowercase conversion, punctuation removal, etc.

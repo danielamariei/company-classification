@@ -6,9 +6,6 @@
 
 # Architecture 
 
-- Input: corpus of text + items
-- Output: found items
-
 ```mermaid
 flowchart LR
         A(Text Corpus) -->|index| CC(Item Classifier)

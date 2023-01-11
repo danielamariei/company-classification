@@ -32,7 +32,7 @@ flowchart LR
 - `classifiers`:
   - Logic for finding companies in the corpus of text
   - Has several indexing strategies: Linear Scan, Lucene, Patricia, Trie
-- `companies`: logic for reading items
+- `companies`: logic for reading companies
 - `configuration`: bean creation
 - `lucene`: abstraction for an In Memory Lucene Index
 - `printer`: logic for printing the results
@@ -76,7 +76,7 @@ Lucene does most of the work out of the box for us: creating an efficient indexi
 
 # Prerequisites
 - Java 11 is available on your system (tested with Java 11 and Java 18)
-- Make sure that the CSV file for the input items to search for has the following header names (please rename the CSV file header names if required):
+- Make sure that the CSV file for the input companies to search for has the following header names (please rename the CSV file header names if required):
   - `Company ID`
   - `Company Name`
 
@@ -118,7 +118,7 @@ You can pipe the execution to a file, if you want to store the results for later
   - After this, a search would be done for every alias/synonym and a hit generated when at least one of the names matches.
 - **Injection**: Some fields were injected with @Autowired. This should be replaced with Constructor Injection
 - **Precision/Recall**
-  - The current implementation for Lucene Strategy uses a `PhraseQuery` for searching an item in the index.
+  - The current implementation for Lucene Strategy uses a `PhraseQuery` for searching a company in the index.
   - This matches documents containing a particular sequence of terms and uses a slop factor to determine how many positions may occur between any two terms in the phrase and still be considered a match: https://lucene.apache.org/core/9_1_0/core/org/apache/lucene/search/package-summary.htm 
   - This can further be improved by incorporating Fuzzy Queries that use Levenshtein distance: https://en.wikipedia.org/wiki/Levenshtein_distance
 

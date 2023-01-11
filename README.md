@@ -12,7 +12,7 @@
 flowchart LR
         A(Article Corpus) -->|index| CC(Company Classifier)
         C(Companies) -->|search| CC(Company Classifier)
-        CC(Comp[any Classifier) -->|output| MC(Found Companies)
+        CC(Company Classifier) -->|output| MC(Found Companies)
     
         IS(Indexing Strategy) --> CC(Company Classifier)
         LSS(Linear Scan Strategy) --> IS(Indexing Strategy)
